@@ -1,6 +1,6 @@
 // server/index.ts
 import express from "express";
-import { createServer } from "http";
+import { createServer } from "https";
 import path from "path";
 import { fileURLToPath } from "url";
 var __filename = fileURLToPath(import.meta.url);
@@ -15,7 +15,7 @@ async function startServer() {
   });
   const port = process.env.PORT || 3e3;
   server.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}/`);
+    console.log(`Server running on https://localhost:${port}/`);
   });
 }
 startServer().catch(console.error);
